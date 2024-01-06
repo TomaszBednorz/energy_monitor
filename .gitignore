@@ -1,7 +1,3 @@
 .settings/*
 Debug/
-
-.cproject
-.mxproject
-.project
-energy_monitor.ioc
+.vscode/
