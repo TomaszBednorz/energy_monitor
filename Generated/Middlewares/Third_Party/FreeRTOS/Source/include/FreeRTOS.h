@@ -199,7 +199,7 @@ extern "C" {
 #endif
 
 #ifndef configUSE_RECURSIVE_MUTEXES
-	#define configUSE_RECURSIVE_MUTEXES 0
+	#define configUSE_RECURSIVE_MUTEXES 1
 #endif
 
 #ifndef configUSE_MUTEXES

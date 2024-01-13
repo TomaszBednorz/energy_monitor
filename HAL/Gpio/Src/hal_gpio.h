@@ -1,43 +1,40 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _HAL_GPIO_H_
+#define _HAL_GPIO_H_
 
 /***********************************************************************************************************
  ********************************************* Included files **********************************************
  ***********************************************************************************************************/
 
-#include "stm32f7xx_hal.h"
+#include <stdint.h>
+#include <stdbool.h>
 
 /***********************************************************************************************************
  ************************************************* Defines *************************************************
  ***********************************************************************************************************/
 
-#define USER_Btn_Pin GPIO_PIN_13
-#define USER_Btn_GPIO_Port GPIOC
-#define USER_Btn_EXTI_IRQn EXTI15_10_IRQn
-#define MCO_Pin GPIO_PIN_0
-#define MCO_GPIO_Port GPIOH
-#define LD1_Pin GPIO_PIN_0
-#define LD1_GPIO_Port GPIOB
-#define INA226_ALERT_Pin GPIO_PIN_1
-#define INA226_ALERT_GPIO_Port GPIOG
-#define LD3_Pin GPIO_PIN_14
-#define LD3_GPIO_Port GPIOB
-#define STLK_RX_Pin GPIO_PIN_8
-#define STLK_RX_GPIO_Port GPIOD
-#define STLK_TX_Pin GPIO_PIN_9
-#define STLK_TX_GPIO_Port GPIOD
-#define TMS_Pin GPIO_PIN_13
-#define TMS_GPIO_Port GPIOA
-#define TCK_Pin GPIO_PIN_14
-#define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-#define LD2_Pin GPIO_PIN_7
-#define LD2_GPIO_Port GPIOB
+/*
+ * Configuration
+ */
+
+#define HAL_GPIO_INA226_ALERT_PIN   (GPIO_PIN_1)
+
+/* LED configuration: name, pin, port */
+#define HAL_GPIO_CFG_TABLE  \
+    HAL_GPIO_CFG_LED(Hal_Gpio_LedGreen, GPIO_PIN_0, GPIOB)   \
+    HAL_GPIO_CFG_LED(Hal_Gpio_LedBlue, GPIO_PIN_7, GPIOB)    \
+    HAL_GPIO_CFG_LED(Hal_Gpio_LedRed, GPIO_PIN_14, GPIOB)
 
 /***********************************************************************************************************
  *********************************************** Data types ************************************************
  ***********************************************************************************************************/
+
+typedef enum
+{
+    #define HAL_GPIO_CFG_LED(name, pin, port)   name,
+        HAL_GPIO_CFG_TABLE
+    #undef HAL_GPIO_CFG_LED
+	Hal_Gpio_LedMax
+}Hal_Gpio_Led_t;
 
 /***********************************************************************************************************
  ********************************************* Exported objects ********************************************
@@ -47,6 +44,16 @@
  ************************************** Exported function prototypes ***************************************
  ***********************************************************************************************************/
 
-void Error_Handler(void);
+/*
+ * API
+ */
+void Hal_Gpio_LedOn(Hal_Gpio_Led_t led);
+void Hal_Gpio_LedOff(Hal_Gpio_Led_t led);
+bool Hal_Gpio_GetAlertStatus(void);
 
-#endif  /* _MAIN_H_ */
+/*
+ * Callback
+ */
+void Hal_Gpio_AlertCb(void);
+
+#endif  /* _HAL_GPIO_H_ */
