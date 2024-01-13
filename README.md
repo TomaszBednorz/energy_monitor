@@ -20,6 +20,7 @@ Project for the class "Operating systems for embedded systems"
 - [x] UART hardware abstraction layer
 - [ ] Energy monitor application layer
 ### Others
+- [x] Cmake configuration
 - [x] Generation of low-level drivers
 - [x] Comments in the software
 - [ ] Documentation
