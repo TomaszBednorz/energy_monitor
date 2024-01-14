@@ -4,6 +4,7 @@
 
 #include "gpio.h"
 #include "hal_gpio.h"
+#include "hal_gpio_cfg.h"
 
 /***********************************************************************************************************
  ************************************************* Defines *************************************************
@@ -64,7 +65,7 @@ void Hal_Gpio_LedOn(Hal_Gpio_Led_t led)
     {
         if(led == i)
         {
-            HAL_GPIO_WritePin(Hal_Gpio_Config[i].port, Hal_Gpio_Config[i].pin, GPIO_PIN_SET);
+            HAL_GPIO_SET_PIN(Hal_Gpio_Config[i].port, Hal_Gpio_Config[i].pin);
         }
     }
 }
@@ -82,7 +83,7 @@ void Hal_Gpio_LedOff(Hal_Gpio_Led_t led)
     {
         if(led == i)
         {
-            HAL_GPIO_WritePin(Hal_Gpio_Config[i].port, Hal_Gpio_Config[i].pin, GPIO_PIN_RESET);
+            HAL_GPIO_RESET_PIN(Hal_Gpio_Config[i].port, Hal_Gpio_Config[i].pin);
         }
     }
 }

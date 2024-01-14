@@ -218,7 +218,7 @@ static void App_EnergyMonitor_TransmitLog(void)
 
     memset(App_EnergyMonitor_Log, '\0', sizeof(App_EnergyMonitor_Log));
 
-    sprintf(App_EnergyMonitor_Log, "%.2d::%.2d::%.2d U= %.2f[mV] I=%.2f [mA] P=%.2f [mW] Consumption=%.2f [mWh] Alert:%d\r\n", \
+    sprintf(App_EnergyMonitor_Log, "%.2d::%.2d::%.2d U= %.2f[V] I=%.2f [mA] P=%.2f [mW] Consumption=%.2f [mWh] Alert:%d\r\n", \
             time_h, time_min, time_s, App_EnergyMonitor_Data.bus_voltage, App_EnergyMonitor_Data.current, \
             App_EnergyMonitor_Data.power, App_EnergyMonitor_Data.power_consumption, App_EnergyMonitor_Data.alert_status);
 

@@ -101,6 +101,7 @@ set(include_path_DIRS
     ${PROJ_PATH}/2_HAL/EnergyMonitor/Src
     ${PROJ_PATH}/2_HAL/EnergyMonitor/Cfg
     ${PROJ_PATH}/2_HAL/Gpio/Src
+    ${PROJ_PATH}/2_HAL/Gpio/Cfg
     ${PROJ_PATH}/2_HAL/Uart/Src
     ${PROJ_PATH}/2_HAL/Uart/Cfg
     ${PROJ_PATH}/1_APP/Ecum/Src
