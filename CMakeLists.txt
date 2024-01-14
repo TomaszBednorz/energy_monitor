@@ -46,12 +46,12 @@ set(EXECUTABLE                      ${CMAKE_PROJECT_NAME})
 #
 set(sources_SRCS
     # Put here your source files, one in each line, relative to CMakeLists.txt file location
-    ${PROJ_PATH}/APP/main.c
     ${PROJ_PATH}/DRV/INA226/Src/ina226.c
     ${PROJ_PATH}/DRV/Irq/Src/irq.c
     ${PROJ_PATH}/HAL/EnergyMonitor/Src/hal_energy_monitor.c
     ${PROJ_PATH}/HAL/Gpio/Src/hal_gpio.c
     ${PROJ_PATH}/HAL/Uart/Src/hal_uart.c
+    ${PROJ_PATH}/APP/Ecum/Src/main.c
     ${PROJ_PATH}/APP/EnergyMonitor/Src/app_energy_monitor.c
     ${PROJ_PATH}/Generated/Core/Src/freertos.c
     ${PROJ_PATH}/Generated/Core/Src/gpio.c
@@ -96,7 +96,6 @@ set(sources_SRCS
 #
 set(include_path_DIRS
     # Put here your include dirs, one in each line, relative to CMakeLists.txt file location
-    ${PROJ_PATH}/APP
     ${PROJ_PATH}/DRV/INA226/Cfg
     ${PROJ_PATH}/DRV/INA226/Src
     ${PROJ_PATH}/HAL/EnergyMonitor/Src
@@ -104,6 +103,7 @@ set(include_path_DIRS
     ${PROJ_PATH}/HAL/Gpio/Src
     ${PROJ_PATH}/HAL/Uart/Src
     ${PROJ_PATH}/HAL/Uart/Cfg
+    ${PROJ_PATH}/APP/Ecum/Src
     ${PROJ_PATH}/APP/EnergyMonitor/Src
     ${PROJ_PATH}/APP/EnergyMonitor/Cfg
     ${PROJ_PATH}/Generated/Core/Inc
@@ -154,7 +154,7 @@ target_link_options(${EXECUTABLE} PRIVATE
     ${CPU_PARAMETERS}
     -Wl,-Map=${CMAKE_PROJECT_NAME}.map
     --specs=nosys.specs
-    # -u _printf_float                # STDIO float formatting support
+    -u _printf_float                # STDIO float formatting support
     -Wl,--start-group
     -lc
     -lm

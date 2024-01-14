@@ -9,9 +9,9 @@
 #include "gpio.h"
 
 #include "ina226.h"
-
 #include "hal_energy_monitor.h"
 #include "hal_uart.h"
+#include "app_energy_monitor.h"
 
 /***********************************************************************************************************
  ************************************************* Defines *************************************************
@@ -83,7 +83,7 @@ int main(void)
   Hal_Uart_Init();
   
   /* APP layer initialization */
-
+  App_EnergyMonitor_Init();
 
   /* Call init function for freertos objects (in freertos.c) */
   MX_FREERTOS_Init();

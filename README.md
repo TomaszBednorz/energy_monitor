@@ -1,4 +1,4 @@
-# energy_monitor
+# Energy Monitor
 
 Project for the class "Operating systems for embedded systems"
 
@@ -18,7 +18,7 @@ Project for the class "Operating systems for embedded systems"
 - [x] Energy monitor hardware abstraction layer
 - [x] GPIO hardware abstraction layer
 - [x] UART hardware abstraction layer
-- [ ] Energy monitor application layer
+- [x] Energy monitor application layer
 ### Others
 - [x] Cmake file configuration
 - [x] Generation of low-level drivers

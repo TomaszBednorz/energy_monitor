@@ -17,7 +17,7 @@
 
 typedef struct 
 {
-    float bus_voltage;  /* mV */
+    float bus_voltage;  /* V */
     float current;      /* mA */
     float power;        /* mW */
 }Hal_EnergyMonitor_Data_t;

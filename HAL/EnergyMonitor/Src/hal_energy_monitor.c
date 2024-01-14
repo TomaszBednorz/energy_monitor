@@ -43,8 +43,8 @@ static Hal_EnergyMonitor_Data_t Hal_EnergyMonitor_Data;
  ********************************************* Local objects ***********************************************
  ***********************************************************************************************************/
 
-osThreadId Hal_EnergyMonitorTaskHandle;
-Hal_EnergyMonitor_State_t Hal_EnergyMonitor_State = EnergyMonitor_StateUninit;
+static osThreadId Hal_EnergyMonitor_TaskHandle;
+static Hal_EnergyMonitor_State_t Hal_EnergyMonitor_State = EnergyMonitor_StateUninit;
 
 /***********************************************************************************************************
  ******************************************* Exported functions ********************************************
@@ -60,8 +60,8 @@ Hal_EnergyMonitor_State_t Hal_EnergyMonitor_State = EnergyMonitor_StateUninit;
 void Hal_EnergyMonitor_Init(void)
 {
     /* Create thread */
-    osThreadDef(EnergyMonitor_Task, Hal_EnergyMonitor_Task, osPriorityNormal, 0, 128);
-    Hal_EnergyMonitorTaskHandle = osThreadCreate(osThread(EnergyMonitor_Task), NULL);
+    osThreadDef(Hal_EnergyMonitor, Hal_EnergyMonitor_Task, osPriorityNormal, 0, 128);
+    Hal_EnergyMonitor_TaskHandle = osThreadCreate(osThread(Hal_EnergyMonitor), NULL);
 
     Hal_EnergyMonitor_State = EnergyMonitor_StateBusVoltage;
 }
@@ -139,13 +139,13 @@ static void Hal_EnergyMonitor_ReadResults(void)
 
     /* Read bus voltage */
     result = INA226_GetResult(INA226_BusVoltage);
-    Hal_EnergyMonitor_Data.bus_voltage = result * HAL_ENERGY_MONITOR_BUS_VOLTAGE_LSB;
+    Hal_EnergyMonitor_Data.bus_voltage = result * HAL_ENERGY_MONITOR_BUS_VOLTAGE_LSB / 1000.0f;  /* Conwert to V */
 
     /* Read power */
     result = INA226_GetResult(INA226_Power);
-    Hal_EnergyMonitor_Data.power = result * HAL_ENERGY_MONITOR_POWER_LSB * 1000.0f;
+    Hal_EnergyMonitor_Data.power = result * HAL_ENERGY_MONITOR_POWER_LSB * 1000.0f;  /* Conwert to mW */
 
     /* Read current */
     result = INA226_GetResult(INA226_Current);
-    Hal_EnergyMonitor_Data.current = result * HAL_ENERGY_MONITOR_CURRENT_LSB * 1000.0f;
+    Hal_EnergyMonitor_Data.current = result * HAL_ENERGY_MONITOR_CURRENT_LSB * 1000.0f;  /* Conwert to mA */
 }
