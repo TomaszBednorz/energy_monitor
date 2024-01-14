@@ -37,12 +37,11 @@ static void Hal_EnergyMonitor_ReadResults(void);
  ******************************************** Exported objects *********************************************
  ***********************************************************************************************************/
 
-static Hal_EnergyMonitor_Data_t Hal_EnergyMonitor_Data;
-
 /***********************************************************************************************************
  ********************************************* Local objects ***********************************************
  ***********************************************************************************************************/
 
+static Hal_EnergyMonitor_Data_t Hal_EnergyMonitor_Data;
 static osThreadId Hal_EnergyMonitor_TaskHandle;
 static Hal_EnergyMonitor_State_t Hal_EnergyMonitor_State = EnergyMonitor_StateUninit;
 
