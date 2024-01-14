@@ -46,49 +46,49 @@ set(EXECUTABLE                      ${CMAKE_PROJECT_NAME})
 #
 set(sources_SRCS
     # Put here your source files, one in each line, relative to CMakeLists.txt file location
-    ${PROJ_PATH}/DRV/INA226/Src/ina226.c
-    ${PROJ_PATH}/DRV/Irq/Src/irq.c
-    ${PROJ_PATH}/HAL/EnergyMonitor/Src/hal_energy_monitor.c
-    ${PROJ_PATH}/HAL/Gpio/Src/hal_gpio.c
-    ${PROJ_PATH}/HAL/Uart/Src/hal_uart.c
-    ${PROJ_PATH}/APP/Ecum/Src/main.c
-    ${PROJ_PATH}/APP/EnergyMonitor/Src/app_energy_monitor.c
-    ${PROJ_PATH}/Generated/Core/Src/freertos.c
-    ${PROJ_PATH}/Generated/Core/Src/gpio.c
-    ${PROJ_PATH}/Generated/Core/Src/i2c.c
-    ${PROJ_PATH}/Generated/Core/Src/stm32f7xx_hal_msp.c
-    ${PROJ_PATH}/Generated/Core/Src/stm32f7xx_it.c
-    ${PROJ_PATH}/Generated/Core/Src/system_stm32f7xx.c
-    ${PROJ_PATH}/Generated/Core/Src/usart.c
-    ${PROJ_PATH}/Generated/Core/Startup/startup_stm32f767zitx.s
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/list.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/queue.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/timers.c
+    ${PROJ_PATH}/3_DRV/INA226/Src/ina226.c
+    ${PROJ_PATH}/3_DRV/Irq/Src/irq.c
+    ${PROJ_PATH}/2_HAL/EnergyMonitor/Src/hal_energy_monitor.c
+    ${PROJ_PATH}/2_HAL/Gpio/Src/hal_gpio.c
+    ${PROJ_PATH}/2_HAL/Uart/Src/hal_uart.c
+    ${PROJ_PATH}/1_APP/Ecum/Src/main.c
+    ${PROJ_PATH}/1_APP/EnergyMonitor/Src/app_energy_monitor.c
+    ${PROJ_PATH}/4_Generated/Core/Src/freertos.c
+    ${PROJ_PATH}/4_Generated/Core/Src/gpio.c
+    ${PROJ_PATH}/4_Generated/Core/Src/i2c.c
+    ${PROJ_PATH}/4_Generated/Core/Src/stm32f7xx_hal_msp.c
+    ${PROJ_PATH}/4_Generated/Core/Src/stm32f7xx_it.c
+    ${PROJ_PATH}/4_Generated/Core/Src/system_stm32f7xx.c
+    ${PROJ_PATH}/4_Generated/Core/Src/usart.c
+    ${PROJ_PATH}/4_Generated/Core/Startup/startup_stm32f767zitx.s
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/list.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/queue.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/timers.c
 )
 
 #
@@ -96,24 +96,24 @@ set(sources_SRCS
 #
 set(include_path_DIRS
     # Put here your include dirs, one in each line, relative to CMakeLists.txt file location
-    ${PROJ_PATH}/DRV/INA226/Cfg
-    ${PROJ_PATH}/DRV/INA226/Src
-    ${PROJ_PATH}/HAL/EnergyMonitor/Src
-    ${PROJ_PATH}/HAL/EnergyMonitor/Cfg
-    ${PROJ_PATH}/HAL/Gpio/Src
-    ${PROJ_PATH}/HAL/Uart/Src
-    ${PROJ_PATH}/HAL/Uart/Cfg
-    ${PROJ_PATH}/APP/Ecum/Src
-    ${PROJ_PATH}/APP/EnergyMonitor/Src
-    ${PROJ_PATH}/APP/EnergyMonitor/Cfg
-    ${PROJ_PATH}/Generated/Core/Inc
-    ${PROJ_PATH}/Generated/Drivers/CMSIS/Device/ST/STM32F7xx/Include
-    ${PROJ_PATH}/Generated/Drivers/CMSIS/Include
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Inc
-    ${PROJ_PATH}/Generated/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/include
-    ${PROJ_PATH}/Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1
+    ${PROJ_PATH}/3_DRV/INA226/Cfg
+    ${PROJ_PATH}/3_DRV/INA226/Src
+    ${PROJ_PATH}/2_HAL/EnergyMonitor/Src
+    ${PROJ_PATH}/2_HAL/EnergyMonitor/Cfg
+    ${PROJ_PATH}/2_HAL/Gpio/Src
+    ${PROJ_PATH}/2_HAL/Uart/Src
+    ${PROJ_PATH}/2_HAL/Uart/Cfg
+    ${PROJ_PATH}/1_APP/Ecum/Src
+    ${PROJ_PATH}/1_APP/EnergyMonitor/Src
+    ${PROJ_PATH}/1_APP/EnergyMonitor/Cfg
+    ${PROJ_PATH}/4_Generated/Core/Inc
+    ${PROJ_PATH}/4_Generated/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+    ${PROJ_PATH}/4_Generated/Drivers/CMSIS/Include
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Inc
+    ${PROJ_PATH}/4_Generated/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/include
+    ${PROJ_PATH}/4_Generated/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1
 )
 
 #
