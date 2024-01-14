@@ -85,7 +85,7 @@ static void App_EnergyMonitor_TransmitLog(void);
  ********************************************* Local objects ***********************************************
  ***********************************************************************************************************/
 
-static osThreadId App_EnergyMonitorTaskHandle;
+static osThreadId App_EnergyMonitor_TaskHandle;
 static App_EnergyMonitor_Data_t App_EnergyMonitor_Data;
 static char App_EnergyMonitor_Log[APP_ENERGY_MONITOR_LOG_LEN];
 
@@ -104,7 +104,7 @@ void App_EnergyMonitor_Init(void)
 {
     /* Create thread */
     osThreadDef(App_EnergyMonitor, App_EnergyMonitor_Task, osPriorityAboveNormal, 0, 512);
-    App_EnergyMonitorTaskHandle = osThreadCreate(osThread(App_EnergyMonitor), NULL);
+    App_EnergyMonitor_TaskHandle = osThreadCreate(osThread(App_EnergyMonitor), NULL);
 }
 
 /***********************************************************************************************************
