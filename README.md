@@ -48,4 +48,4 @@ energy_monitor/
 - [x] Cmake file configuration
 - [x] Generation of low-level drivers
 - [x] Comments in the software
-- [ ] Documentation
+- [x] Documentation
